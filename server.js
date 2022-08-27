@@ -9,7 +9,9 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-
+app.get('/', (req, res) => { 
+    res.send('Hiiiiii! Please hit /test or /api to see if we get something back.')
+});
 
 app.get('/api', (req, res) => { 
     res.json({ test: 'api' })
